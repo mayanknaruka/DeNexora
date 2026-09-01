@@ -17,7 +17,7 @@ import {
   FolderKanban,
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-import { Logo, ROLE_LABEL } from '../Logo';
+import { ROLE_LABEL } from '../Logo';
 import { SearchTrigger } from '../CommandPalette';
 import { PageSkeleton } from '../ui/Skeleton';
 import type { User } from '../../types/api';
@@ -84,7 +84,7 @@ export default function AppShell() {
     <div className="flex min-h-screen bg-cream-100">
       <aside className="hidden w-60 shrink-0 border-r border-slate-200 bg-white lg:flex lg:flex-col">
         <div className="border-b border-slate-100 px-5 py-4">
-          <Logo />
+          <img src="/ayush-logo.png" alt="Ministry of Ayush" className="h-14 w-auto object-contain" />
         </div>
         <nav className="flex-1 space-y-0.5 p-3">
           {links.map(item => {
@@ -110,14 +110,9 @@ export default function AppShell() {
       </aside>
 
       <div className="flex min-w-0 flex-1 flex-col">
-        {isDemo && (
-          <div className="no-print bg-saffron-50 px-4 py-1.5 text-center text-xs font-medium text-saffron-700">
-            Prototype — sample AYUSH data
-          </div>
-        )}
         <header className="sticky top-0 z-20 flex items-center justify-between gap-3 border-b border-slate-200 bg-white/90 px-4 py-3 backdrop-blur lg:px-8">
           <div className="lg:hidden">
-            <Logo compact />
+            <img src="/ayush-logo.png" alt="Ministry of Ayush" className="h-10 w-auto object-contain" />
           </div>
           <SearchTrigger />
           <p className="hidden text-sm text-ink-500 lg:block xl:hidden">Skill mapping · internships</p>
